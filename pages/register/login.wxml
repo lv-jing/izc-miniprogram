@@ -1,0 +1,38 @@
+<view class="page_box padL16">
+	<view class="logo">
+		<image class="" src="../../images/login_logo.png" />
+	</view>
+	<view class="h1">深圳居民一站式癌症筛查平台</view>
+	<view class="tips marB16">
+		居民一站式癌症筛查管理项目是由深圳市卫健委组织实验目的在于进一步提高癌症及病前病变的早诊率降低癌症发病率，项目每年提供一次筛查服务，欢迎符合条件的居民积极参与。
+	</view>
+	<view class="form_box marB64">
+		<view class="item">
+			<view class="fc90 marB4 ">手机号</view>
+			<input type="number" class="borB marB16 " placeholder="请输入" placeholder-class="fc60" maxlength='11' bindinput='input' data-field='phone' value="{{formObj.phone}}" />
+		</view>
+		<view class="item">
+			<view class="fc90 marB4">验证码</view>
+			<view class="flex marB16 borB">
+				<view class="input flex1"><input type="number" placeholder="请输入" placeholder-class="fc60" maxlength='6' bindinput='input' data-field='code' value="{{formObj.code}}" /></view>
+				<text class="btn {{sendCodeFlag?'fcG':'fc90'}}" bindtap="sendCode">{{sendCodeText}}</text>
+			</view>
+		</view>
+	</view>
+	<view class="agreement flex marB16">
+		<view class="l">
+			<image bindtap="selectAgreest" src="../../images/select{{formObj.agreest?'_on':''}}.png" />
+		</view>
+		<view class="m" bindtap="toHref" data-url="/pages/register/agreement">
+			同意
+			<text class="fcG">《癌症筛查协议》</text>
+		</view>
+	</view>
+	<view class="btns_box">
+		<view class="btn_base" bindtap="login">登录</view>
+	</view>
+	<view class="tip">第三方登陆</view>
+	<view class="logo-wx">
+		<image bindtap="getUserProfile" class="" src="../../images/wx.png" />
+	</view>
+</view>

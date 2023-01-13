@@ -1,0 +1,93 @@
+.h2 {
+  padding: 16rpx 0 16rpx 64rpx;
+  font-size: 40rpx;
+}
+
+.body {
+  position: relative;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.body .post {
+  width: 200rpx;
+  height: 200rpx;
+  position: absolute;
+  border-radius: 50%;
+  /* border:1px solid red; */
+}
+
+/*男人*/
+.body.men .wei {
+  top: 0rpx;
+  left: 6%;
+}
+
+.body.men .fei {
+  top: 0rpx;
+  right: 6%;
+}
+
+.body.men .chang {
+  bottom: 116rpx;
+  left: 7%;
+}
+
+.body.men .gan {
+  bottom: 116rpx;
+  right: 7%;
+}
+
+/*女人*/
+.body.women .ruxian {
+  top: 0rpx;
+  left: 6%;
+}
+
+.body.women .fei {
+  top: 0rpx;
+  right: 6%;
+}
+
+.body.women .gan {
+  top: 274rpx;
+  left: 3%;
+}
+
+.body.women .wei {
+  top: 280rpx;
+  right: 3%;
+}
+
+.body.women .chang {
+  bottom: 244rpx;
+  left: 7%;
+}
+
+.body.women .gongjing {
+  bottom: 244rpx;
+  right: 7%;
+}
+
+.pt-icon{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+
+}
+.low-col {
+  background-color: green;
+}
+.hight-col{
+  background-color: orange;
+}
+.page_box .men-img{
+  width: 470rpx;
+  height: 1000rpx;
+}
+.pt-icon image{
+  width: 200rpx;
+  height: 200rpx;
+}

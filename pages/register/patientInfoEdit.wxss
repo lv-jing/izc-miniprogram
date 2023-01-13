@@ -1,0 +1,30 @@
+.line_right{
+  width: 30rpx;
+  height: 30rpx;
+}
+.line{
+  position: relative;
+}
+.line-text{
+  position: absolute;
+  right: 0;
+  bottom:10rpx;
+  color: #909090;
+}
+.share-sheet{
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #DCDFE6;
+  justify-content: space-between;
+  padding-bottom: 10rpx;
+}
+.flex-center{
+  display: flex;
+  align-items: center;
+}
+.text-right{
+  text-align: right;
+}
+.tips{
+  margin-right: 4rpx;
+}

@@ -1,0 +1,17 @@
+.status image {
+  width: 64rpx;
+  height: 64rpx;
+  margin-right: 8rpx;
+}
+
+.status text {
+  font-size: 56rpx;
+}
+
+.upload_img image {
+  width: 50%;
+}
+
+.btns_box .btn_w {
+  margin: 0 auto;
+}

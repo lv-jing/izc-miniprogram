@@ -1,0 +1,13 @@
+<view class="page_box">
+  <view class="status textC marB32 flex flexC">
+    <image src="../../images/success.png" />
+    <text class="fcG fw6">录入信息成功</text>
+  </view>
+  <view class="con padL16 marB32">
+    <view class="  marB32">恭喜您！已完成个人基本信息录入，后续可通过小程序查看体检报告结果，接下来是否要进行癌症评估？</view>
+  </view>
+  <view class="btns_box pad16">
+    <navigator class="btn_base btn_w marR16" url="/pages/home/home" open-type="switchTab">暂不评估</navigator>
+    <navigator class="btn_base marR16" url="/pages/questionnaire/selectPosition" open-type="redirect">进行癌症评估</navigator>
+  </view>
+</view>

@@ -1,0 +1,29 @@
+<view class="">
+  <view class="header pad16 bG fcW">
+    <view class="h1 fs20 fcW textL">评测结果</view>
+    <view class="tip marB8">
+      <image class="marR4" src="../../images/result.png" />
+      <text>此次机测结果仅供参考，不能代替医生诊断</text>
+    </view>
+    <view class="userinfo bW">
+      <view class="name fc30 marR8">{{name}}<text class="fcG">{{gender}} {{age}}</text></view>
+    </view>
+  </view>
+
+  <view class="h2 pad16 fw6 fs13">风险类别:</view>
+
+  <view class="list">
+    <view class="item">
+      <view class="cancer_type flexB borB padT4">
+        <view class="name">{{positionList[formData.position]}}癌</view>
+        <view class="{{result[formData.result]==='高风险人群'?'danger-col':result[formData.result]==='中风险人群'?'warning-col':'default-col'}}">{{result[formData.result]}}</view>
+      </view>
+      <view class="con padT8 fc90 break-spaces">
+        {{formData.description}}
+      </view>
+    </view>
+  </view>
+  <view class="btns_box pad16">
+    <button class="btn_base btn_w" bindtap="toHref" data-url="/pages/home/home">返回首页</button>
+  </view>
+</view>

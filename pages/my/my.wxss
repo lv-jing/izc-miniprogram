@@ -1,0 +1,33 @@
+page {
+    padding: 0;
+}
+
+.header {
+    padding: 32rpx 40rpx;
+    color: #fff;
+    background: #30AF65;
+}
+
+.line_left {
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.img_box {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80rpx;
+    width: 80rpx;
+}
+.head-img{
+    border-radius: 50%;
+    height: 80rpx!important;
+    width: 80rpx!important;
+}
+
+.avatar {
+    width: 28rpx;
+    height: 28rpx;
+}

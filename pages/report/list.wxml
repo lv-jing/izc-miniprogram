@@ -1,0 +1,24 @@
+<view class="fs16">
+    <view wx:if="{{reportlist.length === 0}}" class="not-data-cont">
+        <image class="marB12" src="../../images/notdata.png"></image>
+        <view class="marB8">没有体检信息</view>
+        <view class="cl6 fs14">没有您的体检信息，请先去完成体检</view>
+    </view>
+    <view wx:else class="page_box">
+        <view class="detail-list marB10" wx:for="{{reportlist}}" wx:key="index" bindtap="handleGotoDetail" data-item="{{item}}" data-url="/pages/report/detail">
+            <view class="flex flex-between algin-item-center border-bottom marB12">
+                <view class="fs14 fw6">{{item.hospital?item.hospital:''}}</view>
+                <view class="{{item.status==='已完成'?'col160':''}}">{{item.status}}</view>
+            </view>
+            <view class="flex flex-between algin-item-center marB12">
+                <view>体检编号</view>
+                <view class="cl6">{{item.reportCode}}</view>
+            </view>
+            <view class="flex flex-between algin-item-center marB12">
+                <view>体检时间</view>
+                <view class="cl6">2{{item.examTime}}</view>
+            </view>
+            <view class="col160" bindtap="handleGotoDetail" data-item="{{item}}" wx:if="{{item.status==='已完成'}}" data-url="/pages/report/detail">查看详情 ></view>
+        </view>
+    </view>
+</view>

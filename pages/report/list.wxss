@@ -1,0 +1,28 @@
+.page_box {
+    padding-top:20rpx;
+    background: #f2f2f2;
+    height: 100vh;
+}
+
+
+.not-data-cont {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    width: 500rpx;
+    height: 600rpx;
+}
+
+.not-data-cont image {
+    width: 360rpx;
+    height: 360rpx;
+}
+.detail-list{
+    background-color: #ffffff;
+    padding: 20rpx 40rpx;
+    font-size: 26rpx;
+}

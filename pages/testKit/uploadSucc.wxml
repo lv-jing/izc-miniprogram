@@ -1,0 +1,19 @@
+<view class="page_box padT16">
+  <view class="status textC marB32 flex flexC">
+    <image src="../../images/success.png" />
+    <text class="fcG fw6">上传成功</text>
+  </view>
+  <view class="con padL16">
+    <view class="code fc60 fs16 marB8">
+      <text class="fc90">试剂盒编码：</text>
+      <text class="fc30">{{number}}</text>
+    </view>
+    <view class="tip fs14 marB32">医生会将评估后的结果发送到您的手机上，可以登录小程序查看结果</view>
+  </view>
+  <view class="upload_img flexC marB64">
+    <image src='{{fileID}}' mode="widthFix" />
+  </view>
+  <view class="btns_box">
+    <navigator class="btn_base btn_w" url="/pages/home/home" open-type="switchTab">返回首页</navigator>
+  </view>
+</view>

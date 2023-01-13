@@ -1,0 +1,8 @@
+.page_box{
+    padding: 100rpx 64rpx;
+}
+
+.head .status image{
+    width: 40rpx;
+    height: 40rpx;
+}

@@ -1,0 +1,17 @@
+.content{
+  padding: 48rpx;
+  background: #fff;
+  color: #060606;
+  font-size: 28rpx;
+}
+.phone-img{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 10rpx;
+}
+.phone-contetn{
+  padding: 20rpx 0;
+}
+.clock-img{
+  margin-right: 8rpx;
+}

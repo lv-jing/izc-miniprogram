@@ -1,0 +1,52 @@
+page {
+  background: #fff;
+}
+
+.header {
+  margin-bottom: 70rpx;
+}
+
+.white_box {
+  border-radius: 16rpx;
+  padding: 32rpx;
+  box-shadow: 0px 6px 30px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: -80rpx;
+  line-height: 2;
+}
+
+.hospital_list .item {
+  padding: 20rpx;
+  background: #fff;
+  border-radius: 16rpx;
+  margin-bottom: 30rpx;
+  box-shadow: 0px 6px 30px 3px rgba(0, 0, 0, 0.1);
+}
+
+.hospital_list .item .img_box image {
+  width: 200rpx;
+  height: 150rpx;
+  border-radius: 6rpx;
+  margin-right: 26rpx;
+}
+
+.hospital_list .item .content .address {
+  color: #BDBDBD;
+  font-size: 22rpx;
+  margin: 10rpx 0;
+}
+
+.hospital_list .item .content .address .address_text {
+  max-width: calc(100% - 100rpx);
+}
+
+.hospital_list .item .content .address .gap {
+  width: 120rpx;
+  text-align: right;
+}
+
+.hospital_list .item .content .address view image {
+  min-width: 30rpx;
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 4rpx;
+}

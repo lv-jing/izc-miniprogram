@@ -1,0 +1,37 @@
+.logo image{
+  display: block;
+  width: 150rpx;
+  height: 150rpx;
+  margin: 20rpx auto;
+}
+.h1{
+  text-align: center;
+}
+
+.agreement .l image{
+  width: 44rpx;
+  height: 44rpx;
+}
+.logo-wx image{
+  display: block;
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx auto;
+  border-radius: 50%;
+}
+.tip{
+  text-align: center;
+  margin-top: 30rpx;
+}
+.dialog-footer {
+  margin-top: 20px;
+}
+.dialog-footer button{
+  height:40px ;
+  font-size: 14px;
+  border-radius: 0;
+}
+.dialog-footer button::after{
+  border-radius: 0;
+
+}

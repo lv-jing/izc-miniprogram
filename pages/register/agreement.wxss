@@ -1,0 +1,8 @@
+page {
+  background: #fff;
+  /* padding: 32rpx; */
+}
+
+/* .con .t{
+  text-indent: 2em;
+} */

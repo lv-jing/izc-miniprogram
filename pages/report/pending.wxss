@@ -1,0 +1,24 @@
+page {
+    background: #fff;
+}
+
+.header {
+    margin-bottom: 70rpx;
+}
+
+.white_box {
+    border-radius: 16rpx;
+    padding: 32rpx;
+    box-shadow: 0px 6px 30px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: -80rpx;
+    line-height: 2;
+}
+
+.item .key {
+    width: 56m;
+    padding-right: 16rpx;
+}
+
+.item .val image {
+    width: 200rpx;
+}

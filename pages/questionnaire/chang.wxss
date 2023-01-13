@@ -1,0 +1,35 @@
+.process_box {
+    height: 16rpx;
+    position: relative;
+    width: 100%;
+}
+
+.process_box .process {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 8rpx;
+}
+
+.item-box{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.line-text{
+    position: absolute;
+    right: 0;
+    top:10rpx;
+    color: #909090;
+  }
+.item .on {
+    background: #30AF65;
+    color: #fff;
+}
+.select_box{
+    min-height: 700rpx;
+}
+page{
+    min-height: 100%;
+}

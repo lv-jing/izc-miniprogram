@@ -1,0 +1,12 @@
+<view class="content col5">
+    <view class="logo-content center">
+        <image src="../../images/logo.png"></image>
+    </view>
+    <view class="center marB16">
+        <text>发小科技（深圳）有限公司</text>
+    </view>
+    <view class="text-indent marB8">体检年年都做，癌症依然高发。与其谈癌色变，不如及早预防。知易行难！</view>
+    <view class="text-indent marB8">如何在现有的传统体检路径下，通过AI等科技手段构建一套简便易行的癌症防控机制。助力医院医护人员更加高效的完成防癌、控癌工作？</view>
+    <view class="text-indent marB8">发小科技（深圳）有限公司携手国内多家顶级医院潜心三年研发打造的全球首创-“悦早筛”一站式AI癌症筛查管理平台，即将应需而生。</view>
+    <view class="text-indent">我司作为癌症筛查技术服务商，为医疗卫生机构提供癌症筛查及临床病例数字化管理系统，提供一站式智能化早筛线上平台+系统性线下运营解决方案，构建以预防为主体的癌症防控“智能机制”体系、助力更多家庭远离癌症。</view>
+</view>

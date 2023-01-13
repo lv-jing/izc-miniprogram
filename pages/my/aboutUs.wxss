@@ -1,0 +1,5 @@
+.content {
+    padding: 48rpx;
+    background: #fff;
+    font-size: 28rpx;
+}

@@ -1,0 +1,16 @@
+<view class="page_box pad32">
+	<view class="head padT20">
+		<view class="h1 fs20 fw6">社康预约免费肠镜须知</view>
+		<view class="tip fs12 fc90">您需满足一下条件，方可预约免费检测。</view>
+	</view>
+	<view class="list marB64">
+		<view class="item flex marB16" wx:for="{{checkStep}}" wx:key="index">
+			<view class="num boxR100 bG">{{index+1}}</view>
+			<view class="con">
+				<view class="title">{{item.title}}</view>
+				<view class="desc">{{item.desc}}</view>
+			</view>
+		</view>
+	</view>
+	<navigator class="btn_base" url="/pages/check/hospital?fromPage=order">知道了，开始预约</navigator>
+</view>

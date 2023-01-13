@@ -1,0 +1,32 @@
+<view class="content">
+    <view class="logo-content center">
+        <image src="../../images/logo.png"></image>
+    </view>
+    <view class="center marB32">
+        <text>悦早查</text>
+    </view>
+    <view class="cl6 fs12 marB8">若使用中有任何问题，请联系我们。</view>
+    <view class="phone-contetn border-bottom border-top">
+        <view class="flex flex-between algin-item-center marB12">
+            <view class="flex algin-item-center">
+                <image class="phone-img" src="../../images/phone.png"></image>
+                <text class="fs16">联系方式</text>
+            </view>
+            <view bindtap="callPhone">
+                <text class="fs16">18589021216</text>
+            </view>
+        </view>
+        <view class="flex flex-between algin-item-center">
+            <view class="flex algin-item-center">
+                <view class="clock-img">
+                    <van-icon size="40rpx" color="#46313180" name="clock-o"/>
+                </view>
+                <text class="fs16">工作时间</text>
+            </view>
+            <view bindtap="callPhone">
+                <text class="fs16">工作日 9:00 - 18:00</text>
+            </view>
+        </view>
+    </view>
+
+</view>

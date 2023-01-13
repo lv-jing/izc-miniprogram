@@ -1,0 +1,25 @@
+<view class="page_box pad16">
+<!--    <view class="search_box flex marB16">-->
+<!--        <view class="input_box flex flex1 marR12">-->
+<!--            <input type="text" placeholder="搜索医院名称" class="flex1"/>-->
+<!--            <image src="../../images/search.png"/>-->
+<!--        </view>-->
+<!--        <view class="screen">筛选</view>-->
+<!--    </view>-->
+    <view wx:if="{{hospitalList.length === 0}}" class="not-data-cont">
+        <image class="marB12" src="../../images/notdata.png"></image>
+        <view class="marB8">没有康复中心信息</view>
+        <view class="cl6 fs14">没有康复中心信息，请重新选择地址</view>
+    </view>
+    <view wx:else class="hospital_list">
+        <view class="item flex" wx:for="{{hospitalList}}" wx:key="index" data-id="{{item.id}}"
+              data-name="{{item.communityRecoverName}}" bindtap="seleHospital">
+            <view class="content flex1">
+                <view class="name">{{item.communityRecoverName}}</view>
+                <view class="address flexB">
+                    <text class="addressText">{{item.communityRecoverAddress}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

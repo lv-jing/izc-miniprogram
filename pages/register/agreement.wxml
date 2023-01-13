@@ -1,0 +1,8 @@
+<view>
+    <view class="pad16">
+        <rich-text nodes="{{text}}"></rich-text>
+    </view>
+    <view class="btns_box pad32" wx:if="{{text}}">
+        <button class="btn_base" bindtap="toHref">我已阅读并同意协议</button>
+    </view>
+</view>

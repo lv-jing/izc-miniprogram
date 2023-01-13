@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-dialog": "@vant/weapp/dialog/index"
+  },
+  "navigationBarTitleText": "",
+  "navigationBarBackgroundColor": "#30AF65",
+  "navigationBarTextStyle": "black"
+}

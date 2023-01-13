@@ -1,0 +1,76 @@
+{
+  "pages": [
+    "pages/home/home",
+
+    "pages/my/my",
+    "pages/my/aboutUs",
+    "pages/my/customerService",
+
+    "pages/report/list",
+    "pages/report/detail",
+    "pages/report/pending",
+    "pages/report/result",
+
+    "pages/register/login",
+    "pages/register/patientInfo",
+    "pages/register/patientInfoEdit",
+    "pages/register/registerSucc",
+    "pages/register/agreement",
+
+    "pages/questionnaire/list",
+    "pages/questionnaire/details",
+    "pages/questionnaire/selectPosition",
+    "pages/questionnaire/chang",
+    "pages/questionnaire/fei",
+    "pages/questionnaire/gan",
+    "pages/questionnaire/gongjing",
+    "pages/questionnaire/ruxian",
+    "pages/questionnaire/wei",
+    "pages/questionnaire/result",
+
+    "pages/testKit/scan",
+    "pages/testKit/scanSucc",
+    "pages/testKit/upload",
+    "pages/testKit/uploadSucc",
+
+    "pages/check/tip",
+    "pages/check/hospital",
+    "pages/check/create",
+    "pages/check/createSucc",
+    "pages/check/result"
+  ],
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#30AF65",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_on.png",
+        "text": "早筛首页"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my_on.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "window": {
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "i 早查",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "useExtendedLib": {
+    "weui": true
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序的地图定位"
+    }
+  }
+}

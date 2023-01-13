@@ -1,0 +1,24 @@
+<view>
+  <view class="header pad16 bG fcW">
+    <view class="white_box bW">
+      <view class="name ">
+        <text class="fc00 fs16 fw6 marR16">直肠癌</text>
+        <text class="fcG">检测结果生成中</text>
+      </view>
+      <view class="fc60">预计生成时间：{{endTime}}</view>
+    </view>
+  </view>
+  <view class="con pad16 fc90">
+    <view class="h2 fc30 fw6 marB8">【试剂盒信息】</view>
+    <view class="item flex marB8">
+      <view class="key">试剂盒编码:</view>
+      <view class="val">{{testing_code}}</view>
+    </view>
+    <view class="item flex marB8" wx:if="{{result_pic}}">
+      <view class="key">结果图片:</view>
+      <view class="val">
+        <image src="{{result_pic}}" mode="widthFix" />
+      </view>
+    </view>
+  </view>
+</view>

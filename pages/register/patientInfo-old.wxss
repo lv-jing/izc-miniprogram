@@ -1,0 +1,4 @@
+.line_right{
+  width: 30rpx;
+  height: 30rpx;
+}

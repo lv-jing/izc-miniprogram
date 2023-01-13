@@ -1,0 +1,13 @@
+.line_right{
+  width: 30rpx;
+  height: 30rpx;
+}
+.line{
+  position: relative;
+}
+.line-text{
+  position: absolute;
+  right: 0;
+  bottom:10rpx;
+  color: #909090;
+}

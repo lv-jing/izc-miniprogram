@@ -1,0 +1,28 @@
+<view class=" h100 pad16">
+	<view class="header marB8">
+		<view class="title flexB marB16">
+			<view class="fw6 fs16">
+				<text class="fcG">{{qaPos}}癌</text>
+				风险评估
+			</view>
+			<text class="">{{curIndex+1}}/{{qas.length}}</text>
+		</view>
+		<view class="step_box bGrey boxR8 process_box marB16">
+			<text class="process bG" style="width:{{ ((curIndex+1)/qas.length)*100 }}%"></text>
+		</view>
+		<view class="tip fc90">请耐心完成问卷，便于医生更好了解您的病情</view>
+	</view>
+	<view class="marB8 fs16 fw5 textC">{{qas[curIndex].name}}</view>
+	<view class="select_box  boxR8 boxS pad16  marB32 bW">
+		<view class="title fc90 marB16">{{qas[curIndex].title}}</view>
+		<view class="item  ">
+			<view class=" item-box">
+				<text class="bGrey  padL16 padT8 boxR100 marR16 marB16 {{ (qas[curIndex].val===item.value) ? 'on' : '' }}" wx:for="{{ qas[curIndex].options }}" wx:key="index" data-index="{{ index }}" data-val="{{ item.value}}" bindtap="selectValue">{{item.value}}</text>
+			</view>
+		</view>
+	</view>
+	<view class="btns_box">
+		<button class="btn_base btn_w marR16" bindtap="to_last_question" wx:if="{{ curIndex !== 0 }}">上一题</button>
+		<button class="btn_base btn_s" bindtap="to_next_question">下一题</button>
+	</view>
+</view>

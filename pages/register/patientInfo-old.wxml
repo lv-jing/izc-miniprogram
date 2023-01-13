@@ -1,0 +1,61 @@
+<view class="boxR8 boxS bW pad16 marB16">
+  <view class="fs20 fw6 marB8">个人基本信息</view>
+  <view class="">
+    <view class="fc90 marB4 ">姓名</view>
+    <input type="text" placeholder="请输入" placeholder-class="fc60" maxlength='4' bindinput='input' data-field='name' value="{{formObj.name}}" class="borB marB16 " />
+  </view>
+  <view class="">
+    <view class="fc90 marB4  ">身份证号</view>
+    <input type="number" placeholder="请输入" placeholder-class="fc60" maxlength='18' bindinput='input' data-field='card_id' value="{{formObj.card_id}}" class="borB marB16" />
+  </view>
+  <view class="">
+    <view class="fc90 marB4">性别</view>
+    <picker bindchange="changeGender" value="{{formObj.gender}}" range="{{genders}}" class="marB16 borB">
+      <view class="padT4" wx:if="{{formObj.gender}}">{{formObj.gender}}</view>
+      <view class="fc60 flex padT4" wx:else>
+        <view class="flex1">请选择</view>
+        <image src="../../images/right_icon.png" class="line_right"></image>
+      </view>
+    </picker>
+  </view>
+  <view class="" bindtap="tapAddress" data-url="/pages/map/map">
+    <view class="fc90 marB4 ">常住地址</view>
+    <view wx:if="{{formObj.address}}" class="borB marB16 padT4">
+      {{formObj.address}}
+    </view>
+    <view class="fc60 flex padT4 borB marB16" wx:else>
+      <view class="flex1">请选择</view>
+      <image src="../../images/right_icon.png" class="line_right"></image>
+    </view>
+  </view>
+  <view class="" bindtap="toNext" data-url="/pages/check/hospital">
+    <view class=" fc90 marB4 ">指定社区康复中心</view>
+    <view wx:if="{{formObj.hospital_name}}" class="borB marB16 padT4">
+      {{formObj.hospital_name}}
+    </view>
+    <view class="fc60 flex padT4 borB marB16" wx:else>
+      <view class="flex1">请选择</view>
+      <image src="../../images/right_icon.png" class="line_right"></image>
+    </view>
+  </view>
+  <view class="">
+    <view class="fc90 marB4  ">紧急联系人电话</view>
+    <input type="number" placeholder="请输入" placeholder-class="fc60" maxlength='11' bindinput='input' data-field='contact_phone' value="{{formObj.contact_phone}}" class="borB marB16" />
+  </view>
+  <view class="">
+    <view class=" fc90 marB4 ">与本人关系</view>
+    <picker bindchange="changeContactRelation" value="{{formObj.contact_relation}}" class="borB padT4" range="{{contactRelations}}">
+      <view class="padT4" wx:if="{{formObj.contact_relation}}">{{formObj.contact_relation}}</view>
+      <view class="fc60 flex padT4" wx:else>
+        <view class="flex1">请选择</view>
+        <image src="../../images/right_icon.png" class="line_right"></image>
+      </view>
+    </picker>
+  </view>
+</view>
+<view class="btns_box">
+  <button class="btn_base btn_s" bindtap="tapSubmit">
+    <image src="../../images/next.png" wx:if="{{fromPage!=='my'}}"></image>
+    <text wx:if="{{fromPage==='my'}}">修改</text>
+  </button>
+</view>

@@ -1,0 +1,131 @@
+<view class="boxR8 boxS bW pad16">
+    <view class="fs20 fw6 marB8">个人基本信息</view>
+    <view class="share-sheet marB16">
+        <view>姓名</view>
+        <view class="flex-center fc90 flex-end w70">
+            <input type="text" placeholder="请输入" placeholder-class="fc90" maxlength='20' bindinput='input'
+                   data-field='name'
+                   value="{{formObj.name}}" class="text-right w100"/>
+            <image src="../../images/right_icon.png" class="line_right"></image>
+        </view>
+    </view>
+    <view class="share-sheet marB16">
+        <view>性别</view>
+        <picker bindchange="changeGender" value="{{formObj.gender}}" range="{{genders}}">
+            <view class="flex-center fc90">
+                <view class="padT4" wx:if="{{formObj.gender}}">{{formObj.gender}}</view>
+                <view class="flex1" wx:else>请选择</view>
+                <image src="../../images/right_icon.png" class="line_right"></image>
+            </view>
+        </picker>
+    </view>
+    <view class="share-sheet marB16">
+        <view>手机号码</view>
+        <view class="flex-center fc90 flex-end w70">
+            <input type="number" placeholder="请输入" placeholder-class="fc90" maxlength='20' bindinput='input'
+                   data-field='name' disabled
+                   value="{{formObj.phone}}" class="text-right w100"/>
+        </view>
+    </view>
+    <view class="share-sheet marB16">
+        <view>出生年月日</view>
+        <picker bindchange="changeBirthday" value="{{formObj.birthday}}" start="1900-01-01"
+                end="{{endData}}" mode="date" fields="day">
+            <view class="flex-center fc90">
+                <view wx:if="{{formObj.birthday}}">{{formObj.birthday}}</view>
+                <view class="flex1" wx:else>请选择</view>
+                <image src="../../images/right_icon.png" class="line_right"></image>
+            </view>
+        </picker>
+    </view>
+    <view class="share-sheet marB16">
+        <view>身高</view>
+        <view class="flex-center fc90 flex-end w70">
+            <input type="number" placeholder="请输入" data-name="height" pattern="[0-9]*" bind:blur="heightBlur"
+                   placeholder-class="fc90" maxlength='3' bindinput='input'
+                   data-field='height'
+                   value="{{formObj.height}}" class="text-right"/>
+            <text>cm</text>
+            <image src="../../images/right_icon.png" class="line_right"></image>
+        </view>
+    </view>
+    <view class="share-sheet marB16">
+        <view>体重</view>
+        <view class="flex-center fc90 flex-end w70">
+            <input type="digit" placeholder="请输入" step="0.1" pattern="[0-9]*" placeholder-class="fc90" maxlength='5'
+                   bindinput='input'
+                   data-field='weight'
+                   value="{{formObj.weight}}" class="text-right"/>
+            <text>kg</text>
+            <image src="../../images/right_icon.png" class="line_right"></image>
+        </view>
+    </view>
+    <view class="share-sheet marB16" bindtap="tapAddress" data-type="address">
+        <view>常住地址</view>
+        <view class="flex-center fc90">
+            <view class="flex1" wx:if="{{!formObj.address}}">请选择</view>
+            <view wx:if="{{formObj.address}}">
+                {{formObj.address}}
+            </view>
+            <image src="../../images/right_icon.png" class="line_right"></image>
+        </view>
+    </view>
+    <view class="share-sheet marB16">
+        <view>紧急联系人</view>
+        <view class="flex-center fc90 flex-end w70">
+            <input type="text" placeholder="请输入" placeholder-class="fc90" maxlength='50' bindinput='input'
+                   data-field='emergencyContact'
+                   value="{{formObj.emergencyContact}}" class="text-right w100"/>
+            <image src="../../images/right_icon.png" class="line_right"></image>
+        </view>
+    </view>
+    <view class="share-sheet marB16">
+        <view>紧急联系人电话</view>
+        <view class="flex-center fc90 flex-end w70">
+            <input type="number" placeholder="请输入" pattern="[0-9]*" placeholder-class="fc90" maxlength='11'
+                   bindinput='input'
+                   data-field='emergencyPhone' value="{{formObj.emergencyPhone}}" class="text-right w100"/>
+            <image src="../../images/right_icon.png" class="line_right"></image>
+        </view>
+    </view>
+    <view class="share-sheet marB16">
+        <view>紧急联系人与本人关系</view>
+        <picker bindchange="changeContactRelation" value="{{formObj.emergencyRelation}}" range="{{contactRelations}}">
+            <view class="flex-center fc90">
+                <view wx:if="{{formObj.emergencyRelation}}">{{formObj.emergencyRelation}}</view>
+                <view class="flex1" wx:else>请选择</view>
+                <image src="../../images/right_icon.png" class="line_right"></image>
+            </view>
+        </picker>
+    </view>
+    <view class="share-sheet marB16" bindtap="toNext" data-url="/pages/check/hospital">
+        <view>指定社区康复中心</view>
+        <view class="flex-center fc90">
+            <view class="flex1" wx:if="{{!formObj.hospitalName}}">请选择</view>
+            <view wx:if="{{formObj.hospitalName}}">
+                {{formObj.hospitalName}}
+            </view>
+            <image src="../../images/right_icon.png" class="line_right"></image>
+        </view>
+    </view>
+    <view class="share-sheet marB16">
+        <view class="tips flex-none">我的癌症筛查报告</view>
+        <van-uploader
+                accept="all"
+                multiple
+                file-list="{{ formObj.report }}"
+                max-count="9"
+                max-size="20971520"
+                upload-text="点击上传"
+                bind:after-read="afterRead"
+                bind:delete="bindDelete"
+                bind:oversize="oversize"
+                bind:click-preview="preview"
+        />
+    </view>
+    <view class="btns_box marT100">
+        <button class="btn_base btn_s" bindtap="judgeComplete">
+            <text>确认</text>
+        </button>
+    </view>
+</view>

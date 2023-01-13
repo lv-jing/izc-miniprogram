@@ -1,0 +1,59 @@
+<view>
+  <view class="header pad16 bG fcW">
+    <view class="white_box bW">
+      <view class="name ">
+        <text class="fc00 fs16 fw6 marR16">直肠癌</text>
+        <text class="fcG fcO">{{testKit.testing_result}}</text>
+      </view>
+      <view class="fc60">建议根据自身状况选择性检查</view>
+    </view>
+  </view>
+  <view class="con pad16 fc90" >
+  <view class="marB32">
+    <view class="hello marB16 fc90">
+      <view class="tit marB8">尊敬的{{name}}{{gender==='男'?'先生':'女士'}}</view>
+      <view class="" >
+        根据您的粪便隐血检测结果，建议您<text class="fcG" wx:if="{{testKit.inspect_recommend}}">{{testKit.inspect_recommend}}</text><text class="fcG" wx:if="{{(!testKit.inspect_recommend) && (testKit.testing_result==='阳性')}}">到综合医院完成肠镜检查</text><text class="fcG" wx:if="{{(!testKit.inspect_recommend) && (testKit.testing_result==='阴性')}}">进行定期健康检查</text>。
+      </view>
+    </view>
+    <view wx:if="{{testKit.testing_result==='阳性'}}" class="marB16">
+      <view class="h2 fc30 fw6 marB8">【附近医院】</view>
+      <view class="hospital_list marB16">
+        <view class="item flex" wx:for="{{hospitalList}}" wx:key="index" bindtap="toHref" data-id="{{item.hosId}}">
+          <view class="img_box">
+            <image src="{{item.hospital_pic}}" />
+          </view>
+          <view class="content flex1">
+            <view class="name">{{item.hospital_name}}</view>
+            <view class="address flexB">
+              <view class="flex">
+                <image src="../../images/location.png" />
+                <text class="address_text"></text>
+                {{item.address}}
+              </view>
+              <text class="gap">{{item.gap}}</text>
+            </view>
+            <view class="project fcO">{{item.inspection_items[0].item}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="fs13 marB16" >
+      <view class="h2 fc30 fw6 marB8">【饮食建议】</view>
+      <view wx:if="{{testKit.health_advice}}">{{testKit.health_advice}}</view>
+      <view wx:else>预防结肠直肠癌应注意饮食，医学界一般认为，常吃多脂肪、少纤维饮食者，罹患结肠直肠癌的几率较高。
+研究显示，某些地区的人民膳食偏重蔬菜、果类等含丰富纤维的食物，肠癌患者较其他地区的人民为低。
+剑桥大学曾经公布一项有关饮食与癌症的大型研究，接受调查者达40万人之多，为有史以来最大规模的饮食与癌症研究。
+结果显示，高纤维饮食能有效减低患上致命癌症的危险几率达40%，特别是结肠癌及直肠癌。
+在过去，法国医学界也有研究发现，有三成的癌症病例与病人的饮食习惯有直接关系。
+法国医学科学院曾在《饮食与癌症》调查报告中指出，高脂肪食物以及全脂奶、肉等饱和脂肪酸食品不但容易引发多种癌症，尤其是结肠癌和直肠癌，也易于引发心血管疾病。</view>
+    </view>
+  </view>
+    <view class="btns_box" wx:if="{{testKit.testing_result==='阳性'}}">
+      <button class="btn_base" bindtap="toHref" data-url="/pages/check/tip">检查预约绿色通道</button>
+    </view>
+    <view class="btns_box " wx:if="{{testKit.testing_result==='阴性'}}">
+      <navigator class="btn_base " url="/pages/home/home" open-type="switchTab">返回首页</navigator>
+    </view>
+  </view>
+</view>

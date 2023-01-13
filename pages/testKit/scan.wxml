@@ -1,0 +1,23 @@
+<view class="">
+	<view class="header pad16 bG fcW">
+		<view class="fs20 fw6">评测结果</view>
+		<view class="tip marB8 flex">
+			<image class="marR4" src="../../images/result.png" />
+			<text>此次检测结果仅供参考，不能代替医生诊断</text>
+		</view>
+		<view class="result bW">
+			<view class="fcO fs18">{{result}}人群</view>
+			<view class="fc60" wx:if="{{result==='高风险'}}">建议进行详细筛选</view>
+			<view class="fc60" wx:if="{{result!=='高风险'}}">建议进行定期健康检查</view>
+		</view>
+	</view>
+	<view class="con pad16">
+		<view class="tip fw6">请扫描试剂盒编码领取<text class="fcG">免费检查试管</text>：</view>
+		<view class="scan_box flexC" bindtap="scan">
+			<image class="marR4" src="../../images/scan_l.png" />
+		</view>
+	</view>
+	<view class="btns_box pad16 marB32">
+		<navigator class="btn_base btn_w marA" url="/pages/home/home" open-type="switchTab">返回首页</navigator>
+	</view>
+</view>

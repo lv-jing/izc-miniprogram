@@ -1,0 +1,99 @@
+<view class="">
+  <view class="header pad16 bG fcW">
+    <view class="white_box bW fc90 ">
+      <view class="item flex">
+        <view class="key marR8">试剂盒编码</view>
+        <view class="val fc30">{{reagentCode}}</view>
+      </view>
+      <view class="item">
+        结果示意图，请将
+        <text class="fcG">试管正面</text>
+        拍照并上传
+      </view>
+      <view class="img flexC">
+        <image src="../../images/upload_head_img.png" mode="widthFix"></image>
+      </view>
+      <view class="btn_box marB8">
+        <button class="btn_base btn_s" bindtap="photoUpload">
+          <image src="../../images/camera_ico.png" mode="widthFix" class="marR4" />
+          拍照上传
+        </button>
+      </view>
+    </view>
+  </view>
+  <view class="step_box padL16">
+    <view class="h2 flex">
+      <text class="num">1</text>
+      <text class="fc00">采样注意事项</text>
+    </view>
+    <view class="con step_1 flexB">
+      <view class="img">
+        <image src="../../images/upload_step_1.png" mode="widthFix" />
+      </view>
+      <view class="txt fc12">
+        <view><text class="fcG">1.</text>请勿倒掉保护液</view>
+        <view><text class="fcG">2.</text>避免水便、血便、食物残渣</view>
+        <view><text class="fcG">3.</text>请在粪便正常区域多点采集</view>
+        <view><text class="fcG">4.</text>采集适量，便后拧紧管盖（瓶侧5毫升）</view>
+      </view>
+    </view>
+    <view class="h2 flex">
+      <text class="num">2</text>
+      <text class="fc00">采样视频</text>
+    </view>
+    <view class="con step_2">
+      <video src="cloud://faxiao-product-9g5x5ybo07bef8b4.6661-faxiao-product-9g5x5ybo07bef8b4-1305674104/pageNeed/睿肠太演示视频.mp4" binderror="videoErrorCallback" controls></video>
+    </view>
+    <view class="h2 flex">
+      <text class="num">3</text>
+      <text class="fc00">采样步骤</text>
+    </view>
+    <view class="con step_3">
+      <view class="item flex">
+        <view class="img">
+          <image src="../../images/step1.png" mode="widthFix" />
+        </view>
+        <view class="txt">①取出采便纸，固定于马桶上收集粪便。</view>
+      </view>
+
+      <view class="item flex">
+        <view class="img">
+          <image src="../../images/step2.png" mode="widthFix" />
+        </view>
+        <view class="txt">②用采集拭子在粪便表面刮取粪便（如蚕豆大小）。</view>
+      </view>
+
+      <view class="item flex">
+        <view class="img">
+          <image src="../../images/step3.png" mode="widthFix" />
+        </view>
+        <view class="txt">③将采样拭子插至样本管底部，确保液面上升到5毫升刻度，如果不够，请重复取样。</view>
+      </view>
+
+      <view class="item flex">
+        <view class="img">
+          <image src="../../images/step4.png" mode="widthFix" />
+        </view>
+        <view class="txt">④确认样本足量后，将沾有粪便样本的拭子推离入样本管中，旋紧管盖，放入【采样防漏袋】，并封紧封口。</view>
+      </view>
+
+      <view class="item flex">
+        <view class="img">
+          <image src="../../images/step5.png" mode="widthFix" />
+        </view>
+        <view class="txt">⑤采样结束，将采便纸取下并冲入马桶。</view>
+      </view>
+    </view>
+
+    <view class="h2 flex">
+      <text class="num">4</text>
+      <text class="fc00">等待结果并拍照</text>
+    </view>
+    <view class="con step_4">
+      <view class="tip">将样品放入试剂盒内，等待试剂盒出现红色条纹，并拍照上传照片</view>
+      <view class="img img100">
+        <image src="../../images/upload_step_4.png" mode="widthFix" />
+      </view>
+    </view>
+  </view>
+</view>

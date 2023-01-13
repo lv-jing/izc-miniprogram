@@ -1,0 +1,23 @@
+page {
+  background: #fff;
+  padding-top: 64rpx;
+}
+
+.status image {
+  width: 64rpx;
+  height: 64rpx;
+  margin-right: 8rpx;
+}
+
+.status text {
+  font-size: 56rpx;
+}
+
+.get_img image {
+  width: 100%;
+}
+
+.btns_box navigator {
+  width: 45%;
+  margin: 0 auto;
+}

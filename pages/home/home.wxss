@@ -1,0 +1,55 @@
+page {
+    background: #fff;
+}
+
+.header {
+    margin-bottom: 80rpx;
+    padding-top: 0;
+}
+
+.userinfo {
+    border-radius: 16rpx;
+    padding: 40rpx 32rpx;
+    box-shadow: 0px 6px 30px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: -80rpx;
+    line-height: 2;
+}
+
+.userinfo .r image {
+    width: 60rpx;
+    height: 60rpx;
+}
+.cancer_type{
+    flex-wrap: wrap;
+    justify-content: stretch;
+}
+.userinfo .cancer_type .item {
+    background: #e3e3e3;
+    border-radius: 16rpx;
+    padding: 0 10rpx;
+    margin-top: 16rpx;
+    margin-right: 22rpx;
+}
+
+.nav_list .nav {
+    border-radius: 16rpx;
+    padding: 16rpx 32rpx;
+    background: #fff;
+    box-shadow: 0px 6px 30px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 32rpx;
+}
+
+.nav_list .nav .l image {
+    width: 76rpx;
+    height: 76rpx;
+}
+
+.tip-num {
+    border-radius: 50%;
+    padding: 8rpx;
+    background: red;
+    color: #fff;
+    line-height: 16rpx;
+    margin-left: 20rpx;
+    font-size: 24rpx;
+}

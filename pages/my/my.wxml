@@ -1,0 +1,53 @@
+<view class="page_box">
+    <view class="header flex">
+        <view class="img_box bor marR8" bind:tap="handleChooseAlbum">
+            <image wx:if="{{avatar}}" src="{{avatar}}" class="head-img"/>
+            <image wx:else src="../../images/head.png" />
+        </view>
+        <view class="flex1 ">
+            <view class="fs16 fw6">
+                <text class="name marR4 fw6">{{name}}</text>
+                <image src="../../images/{{gender==='男'?'men':'women'}}.png" class="avatar marR16" />
+            </view>
+            <view class="">{{setPhone}}</view>
+        </view>
+        <image src="../../images/edit_white.png" bindtap="toHref" data-url="/pages/register/patientInfoEdit?fromPage=my" />
+    </view>
+    <view class="pad16 ">
+        <view class="flex padT12 borB" bindtap="toHref" data-url="/pages/questionnaire/list">
+            <image src="/images/report.png" class="marR8 line_left"></image>
+            <view class="flex1">调查问卷</view>
+            <image src="/images/icon-tonext.png"></image>
+        </view>
+        <view class="flex padT12 borB" bindtap="toHref" data-url="/pages/report/list">
+            <image src="/images/repor.png" class="marR8 line_left"></image>
+            <view class="flex1">体检报告</view>
+            <image src="/images/icon-tonext.png"></image>
+        </view>
+        <view class="flex padT12 borB" bindtap="toHref" data-url="/pages/my/customerService">
+            <image src="/images/customer.png" class="marR8 line_left"></image>
+            <view class="flex1">客服中心</view>
+            <image src="/images/icon-tonext.png"></image>
+        </view>
+        <view class="flex padT12 borB" bindtap="toHref" data-url="/pages/my/aboutUs">
+            <image src="/images/about.png" class="marR8 line_left"></image>
+            <view class="flex1">关于我们</view>
+            <image src="/images/icon-tonext.png"></image>
+        </view>
+        <view class="flex padT12 borB" bindtap="toLogin" >
+            <image src="/images/out.png" class="marR8 line_left"></image>
+            <view class="flex1">退出登陆</view>
+            <image src="/images/icon-tonext.png"></image>
+        </view>
+    </view>
+</view>
+<van-dialog
+        data-url="/pages/register/login"
+        use-slot
+        title="是否确认退出"
+        show="{{ show }}"
+        show-cancel-button
+        bind:cancel="onClose"
+        bind:confirm="onConfirm"
+>
+</van-dialog>

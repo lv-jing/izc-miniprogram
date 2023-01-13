@@ -1,0 +1,154 @@
+<view class="page_box">
+  <view class="h2">选择疾病部位</view>
+  <view class="body men" wx:if="{{gender === 'men'}}">
+    <view class="center">
+      <image class="men-img" src="../../images/men_body.png"></image>
+    </view>
+    <view class="post wei" bindtap="selePost" data-type="wei">
+      <view wx:if="{{weiStatus===''}}" class="pt-icon">
+        <image src="../../images/wei.png"></image>
+      </view>
+      <view wx:if="{{weiStatus==='0'}}" class="pt-icon">
+        <image src="../../images/wei1.png"></image>
+      </view>
+      <view wx:if="{{weiStatus==='1'}}" class="pt-icon ">
+        <image src="../../images/wei2.png"></image>
+      </view>
+      <view wx:if="{{weiStatus==='2'}}" class="pt-icon ">
+        <image src="../../images/wei3.png"></image>
+      </view>
+    </view>
+    <view class="post fei" bindtap="selePost" data-type="fei">
+      <view wx:if="{{feiStatus===''}}" class="pt-icon">
+        <image src="../../images/fei.png"></image>
+      </view>
+      <view wx:if="{{feiStatus==='0'}}" class="pt-icon">
+        <image src="../../images/fei1.png"></image>
+      </view>
+      <view wx:if="{{feiStatus==='1'}}" class="pt-icon ">
+        <image src="../../images/fei2.png"></image>
+      </view>
+      <view wx:if="{{feiStatus==='2'}}" class="pt-icon ">
+        <image src="../../images/fei3.png"></image>
+      </view>
+    </view>
+    <view class="post chang" bindtap="selePost" data-type="chang">
+      <view wx:if="{{changStatus===''}}" class="pt-icon">
+        <image src="../../images/chang.png"></image>
+      </view>
+      <view wx:if="{{changStatus==='0'}}" class="pt-icon">
+        <image src="../../images/chang1.png"></image>
+      </view>
+      <view wx:if="{{changStatus==='1'}}" class="pt-icon ">
+        <image src="../../images/chang2.png"></image>
+      </view>
+      <view wx:if="{{changStatus==='2'}}" class="pt-icon ">
+        <image src="../../images/chang3.png"></image>
+      </view>
+    </view>
+    <view class="post gan" bindtap="selePost" data-type="gan">
+      <view wx:if="{{ganStatus===''}}" class="pt-icon">
+        <image src="../../images/gan.png"></image>
+      </view>
+      <view wx:if="{{ganStatus==='0'}}" class="pt-icon">
+        <image src="../../images/gan1.png"></image>
+      </view>
+      <view wx:if="{{ganStatus==='1'}}" class="pt-icon ">
+        <image src="../../images/gan2.png"></image>
+      </view>
+      <view wx:if="{{ganStatus==='2'}}" class="pt-icon ">
+        <image src="../../images/gan3.png"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="body women" wx:if="{{gender === 'women'}}">
+    <view class="center">
+      <image class="men-img" src="../../images/women_body.png" mode="widthFix" />
+    </view>
+    <view class="post ruxian" bindtap="selePost" data-type="ruxian">
+      <view wx:if="{{rxStatus===''}}" class="pt-icon">
+        <image src="../../images/rx.png"></image>
+      </view>
+      <view wx:if="{{rxStatus==='0'}}" class="pt-icon">
+        <image src="../../images/rx1.png"></image>
+      </view>
+      <view wx:if="{{rxStatus==='1'}}" class="pt-icon ">
+        <image src="../../images/rx2.png"></image>
+      </view>
+      <view wx:if="{{rxStatus==='2'}}" class="pt-icon ">
+        <image src="../../images/rx3.png"></image>
+      </view>
+    </view>
+    <view class="post fei" bindtap="selePost" data-type="fei">
+      <view wx:if="{{feiStatus===''}}" class="pt-icon">
+        <image src="../../images/fei.png"></image>
+      </view>
+      <view wx:if="{{feiStatus==='0'}}" class="pt-icon">
+        <image src="../../images/fei1.png"></image>
+      </view>
+      <view wx:if="{{feiStatus==='1'}}" class="pt-icon ">
+        <image src="../../images/fei2.png"></image>
+      </view>
+      <view wx:if="{{feiStatus==='2'}}" class="pt-icon ">
+        <image src="../../images/fei3.png"></image>
+      </view>
+    </view>
+    <view class="post gan" bindtap="selePost" data-type="gan">
+      <view wx:if="{{ganStatus===''}}" class="pt-icon">
+        <image src="../../images/gan.png"></image>
+      </view>
+      <view wx:if="{{ganStatus==='0'}}" class="pt-icon">
+        <image src="../../images/gan1.png"></image>
+      </view>
+      <view wx:if="{{ganStatus==='1'}}" class="pt-icon ">
+        <image src="../../images/gan2.png"></image>
+      </view>
+      <view wx:if="{{ganStatus==='2'}}" class="pt-icon ">
+        <image src="../../images/gan3.png"></image>
+      </view>
+    </view>
+    <view class="post wei" bindtap="selePost" data-type="wei">
+      <view wx:if="{{weiStatus===''}}" class="pt-icon">
+        <image src="../../images/wei.png"></image>
+      </view>
+      <view wx:if="{{weiStatus==='0'}}" class="pt-icon">
+        <image src="../../images/wei1.png"></image>
+      </view>
+      <view wx:if="{{weiStatus==='1'}}" class="pt-icon ">
+        <image src="../../images/wei2.png"></image>
+      </view>
+      <view wx:if="{{weiStatus==='2'}}" class="pt-icon ">
+        <image src="../../images/wei3.png"></image>
+      </view>
+    </view>
+    <view class="post chang" bindtap="selePost" data-type="chang">
+      <view wx:if="{{changStatus===''}}" class="pt-icon">
+        <image src="../../images/chang.png"></image>
+      </view>
+      <view wx:if="{{changStatus==='0'}}" class="pt-icon">
+        <image src="../../images/chang1.png"></image>
+      </view>
+      <view wx:if="{{changStatus==='1'}}" class="pt-icon ">
+        <image src="../../images/chang2.png"></image>
+      </view>
+      <view wx:if="{{changStatus==='2'}}" class="pt-icon ">
+        <image src="../../images/chang3.png"></image>
+      </view>
+    </view>
+    <view class="post gongjing" bindtap="selePost" data-type="gongjing">
+      <view wx:if="{{gjStstus===''}}" class="pt-icon">
+        <image src="../../images/gj.png"></image>
+      </view>
+      <view wx:if="{{gjStstus==='0'}}" class="pt-icon">
+        <image src="../../images/gj1.png"></image>
+      </view>
+      <view wx:if="{{gjStstus==='1'}}" class="pt-icon ">
+        <image src="../../images/gj2.png"></image>
+      </view>
+      <view wx:if="{{gjStstus==='2'}}" class="pt-icon ">
+        <image src="../../images/gj3.png"></image>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,47 @@
+page {
+  background: #fff;
+}
+
+.header {
+  margin-bottom: 80rpx;
+}
+
+.userinfo {
+  border-radius: 16rpx;
+  padding: 32rpx;
+  box-shadow: 0px 6px 30px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: -80rpx;
+  line-height: 2;
+}
+
+.list {
+  margin: 20rpx 32rpx;
+}
+
+.list .item {
+  box-shadow: 0px 6px 30px 3px rgba(0, 0, 0, 0.1);
+  border: #fff;
+  border-radius: 20rpx;
+  padding: 32rpx;
+  margin-bottom: 20rpx;
+}
+
+
+
+.status image {
+  width: 64rpx;
+  height: 64rpx;
+  margin-right: 8rpx;
+}
+
+.status text {
+  font-size: 56rpx;
+}
+
+.get_img image {
+  width: 100%;
+}
+
+.textL {
+  text-align: left;
+}

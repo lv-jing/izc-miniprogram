@@ -1,0 +1,25 @@
+<view class="page_box">
+  <view class="status textC marB32 flex flexC">
+    <image src="../../images/success.png" />
+    <text class="fcG fw6">领取成功</text>
+  </view>
+  <view class="con padL16 marB32">
+    <view class="code fc60 fs16 marB8">
+      <text class="fc90">试剂盒编码：</text>
+      <text class="fc30">{{number}}</text>
+    </view>
+    <view class="code fc60 fs16 marB8">
+      <text class="fc90">试剂盒名称：</text>
+      <text class="fc30">大便隐血检测试剂</text>
+    </view>
+    <view class="get_img flexC marB16">
+      <image src="../../images/test1.png" mode="widthFix" />
+    </view>
+    <view class="tip fs14 marB32">医生会将评估后的结果发送到您的手机上，可以登录小程序查看结果</view>
+  </view>
+
+  <view class="btns_box pad16">
+    <navigator class="btn_base btn_w marR16" url="/pages/home/home" open-type="switchTab">返回首页</navigator>
+    <navigator class="btn_base marR16" url="/pages/testKit/upload?number={{number}}" open-type="redirect">查看采样教程</navigator>
+  </view>
+</view>

@@ -1,0 +1,32 @@
+<view class="fs16">
+    <view wx:if="{{reportlist.length === 0}}" class="not-data-cont">
+        <image class="marB12" src="../../images/notdata.png"></image>
+        <view class="marB8">没有问卷信息</view>
+        <view class="cl6 fs14">没有您的问卷信息，请完成评测后再查看</view>
+    </view>
+    <view wx:else class="page_box">
+        <view class="detail-list marB10" wx:for="{{reportlist}}" wx:key="index" bindtap="handleGotoDetail" data-item="{{item}}" data-url="/pages/questionnaire/details">
+            <view class="flex flex-between algin-item-center marB12">
+                <view class="fs14 fw6">评估类型：{{positionList[item.position]}}癌评估</view>
+<!--                <view class="{{item.status===1?'col160':''}}">{{item.status===1?'已完成':'未完成'}}</view>-->
+            </view>
+            <view class="flex flex-between algin-item-center marB12">
+                <view>评估时间</view>
+                <view class="cl6">{{item.createTime}}</view>
+            </view>
+            <view class="flex flex-between algin-item-center marB12">
+                <view>评估结果</view>
+                <view class="{{result[item.result]==='高风险人群'?'danger-col':result[item.result]==='中风险人群'?'warning-col':'default-col'}}">{{result[item.result]}}</view>
+            </view>
+            <view class="col160" bindtap="handleGotoDetail" data-item="{{item}}" data-url="/pages/questionnaire/details">查看详情></view>
+        </view>
+        <view class="detail-list flex flex-between algin-item-center">
+            <view>快捷功能</view>
+            <view class="flex">
+                <view class="col160" bind:tap="goto" data-url="/pages/questionnaire/selectPosition">评估问卷</view>
+                <view style="margin:0 20rpx">|</view>
+                <view class="col160" bind:tap="goto" data-url="/pages/report/list" data-type="1">体检报告</view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,30 @@
+page {
+  background: #fff;
+  padding-top: 64rpx;
+  height: 100%;
+  box-sizing: border-box;
+}
+.page_box{
+  height: 100%;
+}
+.status image {
+  width: 64rpx;
+  height: 64rpx;
+  margin-right: 8rpx;
+}
+
+.status text {
+  font-size: 40rpx;
+}
+
+.get_img image {
+  width: 100%;
+}
+
+.btns_box navigator {
+  width: 45%;
+  margin: 0 auto;
+}
+.con{
+  height: calc(100% - 300px);
+}

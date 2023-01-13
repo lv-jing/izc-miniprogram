@@ -1,0 +1,99 @@
+page{
+  background: #fff;
+}
+.header{
+  margin-bottom: 70rpx;
+}
+.header .step image{
+  width: 100%;
+}
+.white_box{
+  border-radius: 16rpx;
+  padding: 32rpx;
+  box-shadow: 0px 6px 30px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: -80rpx;
+  line-height: 2;
+}
+
+.hospital_list .item {
+  padding: 20rpx;
+  background:#fff;
+  border-radius: 16rpx;
+  margin-bottom: 30rpx;
+  box-shadow: 0px 6px 30px 3px rgba(0, 0, 0, 0.1);
+}
+.hospital_list .item .img_box image{
+  width:200rpx;
+  height:150rpx;
+  border-radius: 6rpx;
+  margin-right: 26rpx;
+}
+.hospital_list .item .content .address{
+  color: #BDBDBD;
+  font-size: 22rpx;
+  margin:10rpx 0;
+}
+.hospital_list .item .content .address view image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.order_desc {
+  border-radius: 16rpx;
+  padding: 32rpx;
+  box-shadow: 0px 6px 30px 3px rgba(0, 0, 0, 0.1);
+}
+.order_desc .item{
+  display: flex;
+  align-items: center;
+  line-height: 2;
+
+}
+.order_desc .item .key{
+  width: 5em;
+}
+.order_desc .item .val{
+ color: #303030;
+}
+.check_result_img image{
+  width: 100%;
+}
+.step{
+  position: relative;
+}
+.step-line{
+  height: 20rpx;
+  background: #fff;
+  width: 90%;
+  position: absolute;
+  top:30rpx;
+  left:30rpx;
+  box-sizing: border-box;
+}
+.step-box{
+  z-index:1;
+  position: relative;
+  display: flex;
+justify-content: space-between;
+}
+.step-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.step-item-box{
+  background: #fff;
+  border-radius: 50%;
+  height: 70rpx;
+  width: 70rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10rpx;
+}
+.step-item-box image{
+  height: 60rpx;
+  width: 60rpx;
+  max-width: 60rpx;
+  max-height: 60rpx;
+}

@@ -1,0 +1,56 @@
+<view>
+    <view class="header pad16 bG fcW">
+        <view class="top flexB">
+            <view class="l">
+                <view class="fs22 fw6">悦早查</view>
+                <view class="tip marB16">
+                    <text>悦早查，有癌早治，无癌早防。</text>
+                </view>
+            </view>
+            <view class="r" wx:if="{{weather.degree}}">
+                <view class="fs20">{{weather.degree}}°</view>
+                <view class="tianqi">{{weather.city}} | {{weather.weather}}</view>
+            </view>
+        </view>
+        <view class="userinfo bW">
+            <view class="flexB">
+                <view class="l">
+                    <view class="name fc30">
+                        <text class="fw6 fs16">{{name}} </text>
+                        <text class="fcG">{{gender}} | {{age}}</text>
+                    </view>
+                </view>
+                <view class="r flexLC" bindtap="toHref"
+                      data-url="/pages/questionnaire/selectPosition?gender={{ gender }}">
+                    <image src="../../images/edit.png"/>
+                    <text class="fc30">评测</text>
+                </view>
+            </view>
+            <view class="cancer_type flex">
+                <view class="item flex" wx:for="{{statusList}}" wx:key="index" wx:if="{{result[item.status] &&result[item.status]!=='低风险' }}"
+                      bindtap="toHref"
+                      data-url="/pages/questionnaire/selectPosition?gender={{ gender }}">
+                    <image class="marR4" src="{{result[item.status]==='高风险'?'../../images/danger.png':'../../images/tip_orange.png'}}"/>
+                    <text wx:if="{{gender==='男' }}"
+                          class="txt {{result[item.status]==='高风险'?'danger-col':'warning-col'}}">{{positionList[index]}}{{result[item.status]}}</text>
+                    <text wx:if="{{gender==='女'}}"
+                          class="txt {{result[item.status]==='高风险'?'danger-col':'warning-col'}}">{{positionWomenList[index]}}{{result[item.status]}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="nav_list pad16">
+        <view class="nav flex" bindtap="toHref" data-url="/pages/report/list">
+            <view class="l marR16">
+                <image class="marR4" src="../../images/repor.png"/>
+            </view>
+            <view class="m flex1">
+                <view class="name flex weight600">体检报告</view>
+                <view class="desc">检查报告结果</view>
+            </view>
+            <view class="r">
+                <image class="marR4" src="../../images/icon-tonext.png"/>
+            </view>
+        </view>
+    </view>
+</view>

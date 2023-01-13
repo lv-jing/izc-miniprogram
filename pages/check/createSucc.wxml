@@ -1,0 +1,35 @@
+<view class="page_box">
+    <view class="head textC marB32">
+        <view class="status fcG fs20">
+            <image src="../../images/success.png" class="marR4" />
+            <text>预约成功</text>
+        </view>
+        <view class="tip fs10">请您按时到医院就诊</view>
+    </view>
+
+    <view class="list marB64">
+        <view class="item marB8">
+            <text class="key fc90 marR16">订单编码</text>
+            <text class="con fc30">{{checkInfo.id}}</text>
+        </view>
+        <view class="item marB8">
+            <text class="key fc90 marR16">就诊医院</text>
+            <text class="con fc30">{{hospital_name}}</text>
+        </view>
+        <view class="item marB8">
+            <text class="key fc90 marR16">就诊日期</text>
+            <text class="con fc30">{{checkInfo.check_date}} {{checkInfo.week}}</text>
+        </view>
+        <view class="item marB8">
+            <text class="key fc90 marR16">就诊时间</text>
+            <text class="con fc30">{{checkInfo.check_hour}}</text>
+        </view>
+        <view class="item marB8">
+            <text class="key fc90 marR16">就诊患者</text>
+            <text class="con fc30">{{name}}{{gender==='男'?'先生':'女士'}}</text>
+        </view>
+    </view>
+    <view class="btns_box ">
+        <navigator class="btn_base" url="/pages/home/home" open-type="switchTab">返回首页</navigator>
+    </view>
+</view>

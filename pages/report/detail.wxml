@@ -1,0 +1,65 @@
+<view class="fs16">
+    <view class="page_box">
+        <view class="detail-list marB10">
+            <view class="flex flex-between algin-item-center marB12">
+                <view class="fs14">{{formData.hospital?formData.hospital:''}}</view>
+                <view class="fs14">{{formData.packageName}}</view>
+            </view>
+            <view class="flex flex-between algin-item-center marB12">
+                <view>总负责医生：{{formData.attendingDoctor}}</view>
+                <view class="cl6">报告时间：{{formData.reportTime||''}}</view>
+            </view>
+        </view>
+        <van-collapse accordion value="{{ activeName }}" bind:change="onChange">
+            <view class="marB12">
+                <van-collapse-item title="检查综述" name="a" custom-class="sasasa">
+                    <view class="cl6 fs14">
+                        <view class="break-spaces">{{formData.summarize}}</view>
+                    </view>
+                </van-collapse-item>
+            </view>
+            <view class="marB12">
+                <van-collapse-item title="医生建议" name="b">
+                    <view class="cl6 fs14">
+                        <view class="break-spaces">{{formData.suggestion}}</view>
+                    </view>
+                </van-collapse-item>
+            </view>
+            <view class="marB12" wx:for="{{formData.packageList}}" wx:key="index">
+                <van-collapse-item title="{{item.projectName}}" name="{{index}}">
+                    <view class="cl6 fs14">
+                        <view>
+                            <view class="flex flex-between algin-item-center marB12">
+                                <view class="fs14">检查日期</view>
+                                <view class="fs14">{{item.examDate}}</view>
+                            </view>
+                            <view class="flex flex-between algin-item-center marB12">
+                                <view>检查医生</view>
+                                <view class="cl6">{{item.examDoctor}}</view>
+                            </view>
+                        </view>
+                        <view>
+                            <view class="flex flex-between algin-item-center marB12 clf2">
+                                <view>检查项目</view>
+                                <view>结果</view>
+                            </view>
+                        </view>
+                        <view class="flex flex-between algin-item-center marB12" wx:for="{{item.littleProjectList}}"
+                              wx:key="index">
+                            <view class="flex-none">{{item.name }}
+                                <van-icon wx:if="{{item.referenceValue}}" name="warning-o" size="16" bind:tap="topPoper"
+                                          data-item="{{item}}"/>
+                            </view>
+                            <view class="cl6">{{item.result || ''}}</view>
+                        </view>
+                        <view class="clf2 marB12" wx:if="{{item.littleSummarize}}">小结</view>
+                        <view class="break-spaces">{{item.littleSummarize || ''}}</view>
+                    </view>
+                </van-collapse-item>
+            </view>
+        </van-collapse>
+    </view>
+    <view class="btns_box pad16">
+        <button class="btn_base btn_w" bind:tap="toDown">下载体检报告单</button>
+    </view>
+</view>

@@ -1,0 +1,94 @@
+/**app.wxss**/
+@import 'style/base.wxss';
+/* padding */
+.pd30 {
+    padding: 30rpx;
+}
+
+.cl6 {
+    color: #666666;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.weight600 {
+    font-weight: 600;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.w70 {
+    width: 70%;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.center {
+    text-align: center;
+}
+
+.text-indent {
+    text-indent: 2em;
+}
+.danger-col{
+    color: #ff4d4f;
+}
+.warning-col{
+    color: #e6a23c;
+}
+.default-col{
+    color: #409eff;
+}
+.col5 {
+    color: #555555;
+}
+
+.col160 {
+    color: #07c160
+}
+
+.logo-content image {
+    width: 200rpx;
+    height: 200rpx;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-around {
+    justify-content: space-around;
+}
+
+.flex-between {
+    justify-content: space-between;
+}
+
+.flex-evenly {
+    justify-content: space-evenly;
+}
+
+.algin-item-center {
+    align-items: center;
+}
+
+.border-bottom {
+    border-bottom: 1rpx solid #DCDFE6;
+}
+
+.border-top {
+    border-top: 1rpx solid #DCDFE6;
+}
+.break-spaces{
+    white-space: break-spaces;
+}
+.flex-none{
+    flex: none;
+    margin-right: 10rpx;
+}

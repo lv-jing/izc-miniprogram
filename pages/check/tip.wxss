@@ -1,0 +1,22 @@
+.list .item .num {
+    border-radius: 50%;
+    background: #30AF65;
+    text-align: center;
+    font-size: 32rpx;
+    color: #fff;
+    width: 50rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    margin-right: 16rpx;
+}
+
+.list .item .con .title {
+    font-size: 32rpx;
+    color: #101010;
+}
+
+.list .item .con .desc {
+    color: #999;
+    font-size: 26rpx;
+
+}

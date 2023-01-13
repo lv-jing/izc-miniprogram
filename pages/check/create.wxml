@@ -1,0 +1,53 @@
+<view class="page_box pad16">
+	<view class="box">
+		<view class="h2">就诊医院</view>
+		<view class="hospital_box">
+			<view class="item flex">
+				<view class="img_box">
+					<image src="{{hospitalInfo.hospital_pic}}" />
+				</view>
+				<view class="content flex1">
+					<view class="name">{{hospitalInfo.hospital_name}}</view>
+					<view class="address flexB">
+						<view class="flex">
+							<image src="../../images/location.png" class="marR4" />
+							{{hospitalInfo.address}}
+						</view>
+						<text>{{hospitalInfo.gap}}</text>
+					</view>
+					<view class="project fcO">{{checkInfo.item}}</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="box" wx:if="{{!noQuota}}">
+		<view class="h2">就诊日期</view>
+		<view class="con date flex">
+			<view class="item flexC {{ selDateVal === index ? 'on' : '' }}" wx:for="{{ dates }}" wx:key="index" bindtap="seleDateTime" data-index="{{ index }}" data-key="selDateVal" data-quota="{{item.quota}}">
+				<image src="../../images/success.png" wx:if="{{ selDateVal === index }}" class="marR4 image" />
+				<view wx:if="{{ selDateVal !== index }}" class="marR4 image"></view>
+				<text class="fc00">{{item.time}}</text>
+				<text class="week fc00">{{item.week}}</text>
+				<text class="ishasnum {{ item.quota!==0 ? 'fcG' : 'fcGrey' }}">{{item.quota!==0 ? '有号' : '约满'}}</text>
+			</view>
+		</view>
+	</view>
+	<view class="box" wx:if="{{!noQuota}}">
+		<view class="h2">就诊时间</view>
+		<view class="con date time flex ">
+			<view class="flexC item {{ selTimeVal === index ? 'on' : '' }}" bindtap="seleDateTime" wx:for="{{ checkInfo.times }}" wx:key="index" data-index="{{ index }}" data-key="selTimeVal">
+				<image src="../../images/success.png" wx:if="{{ selTimeVal === index }}" class="marR4 image" />
+				<view wx:if="{{ selTimeVal !== index }}" class="marR4 image"></view>
+				<text>{{item}}</text>
+			</view>
+		</view>
+	</view>
+	<view class="box">
+		<view class="h2">就诊须知</view>
+		<view class="con tip fc90">{{checkInfo.notice}}</view>
+	</view>
+	<view class="btns_box">
+		<view class="btn_base " bindtap="submitInfo" wx:if="{{!noQuota}}">预约检查</view>
+		<view class="btn_base " wx:else>已约满</view>
+	</view>
+</view>

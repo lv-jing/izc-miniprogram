@@ -1,0 +1,69 @@
+<view>
+  <view class="header pad16 bG fcW">
+    <view class="step marB16">
+      <view class="step-box">
+        <view class="step-item " wx:for="{{states}}" wx:key="index">
+          <view class="step-item-box">
+            <image src="../../images/success.png" wx:if="{{curState >= index}}"></image>
+          </view>
+          <view>
+            {{item}}
+          </view>
+        </view>
+      </view>
+      <view class="step-line"></view>
+    </view>
+    <view class="fs13" wx:if="{{curState===0}}">请在就诊当日前往医院检查</view>
+    <view class="fs13" wx:if="{{curState===1}}">报告生成中，请您耐心等待</view>
+    <view class="fs13" wx:if="{{curState===2}}">检查报告已生成，请查看检查结果</view>
+  </view>
+  <view class="con pad16 fc90">
+    <view class="hospital_list marB16">
+      <view class="item flex">
+        <view class="img_box">
+          <image src="{{checkInfo.hospitalInfoModel.hospital_pic}}" />
+        </view>
+        <view class="content flex1">
+          <view class="name">{{checkInfo.hospitalInfoModel.hospital_name}}</view>
+          <view class="address flexB">
+            <view class="flex">
+              <image src="../../images/location.png" class="marR4" />
+              {{checkInfo.hospitalInfoModel.address}}
+            </view>
+            <text>{{distance}}</text>
+          </view>
+          <view class="project fcO fs13">{{checkInfo.hospitalInfoModel.inspection_items[0].item}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="fs13">
+      <view class="h2 fc30 fw6 padT16">订单详情</view>
+      <view class="order_desc">
+        <view class="item">
+          <view class="key">就诊患者</view>
+          <view class="val">{{name}} {{gender==='男'?'先生':'女士'}}</view>
+        </view>
+        <view class="item">
+          <view class="key">检查项目</view>
+          <view class="val">肠镜检查</view>
+        </view>
+        <view class="item">
+          <view class="key">就诊时间</view>
+          <view class="val">{{checkInfo.check_date}}</view>
+        </view>
+        <view class="item">
+          <view class="key">就诊时段</view>
+          <view class="val">{{checkInfo.check_hour}}</view>
+        </view>
+        <view class="item">
+          <view class="key">创建时间</view>
+          <view class="val">{{checkInfo.createdAt}}</view>
+        </view>
+      </view>
+      <view class="h2 fc30 fw6 padT16" wx:if="{{checkInfo.fileID}}">检查结果</view>
+      <view class="check_result_img">
+        <image src="{{checkInfo.fileID}}" mode="widthFix" />
+      </view>
+    </view>
+  </view>
+</view>
